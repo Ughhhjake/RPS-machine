@@ -1,17 +1,17 @@
 console.log("test")
 
 function getPlayerChoice() {
-  let randomWord = prompt("What is your selection *no caps or punctuation*");
+  let randomWord = prompt("What is your selection *cap first letter no punctuation*");
 
-  if (randomWord == "rock") {
+  if (randomWord == "Rock") {
   console.log("Player has selected Rock.")
-  return "rock"
-} else if (randomWord == "paper") {
+  return "Rock"
+} else if (randomWord == "Paper") {
   console.log("Player has selected Paper.")
-  return "paper"
-} else if (randomWord == "scissors") {
+  return "Paper"
+} else if (randomWord == "Scissors") {
   console.log("Player has selected Scissors.")
-  return "scissors"
+  return "Scissors"
 } else {
   alert("Bro.")
   console.log("Bro, thats not an option.")
@@ -39,19 +39,20 @@ let computerSelection = getComputerChoice();
 console.log(computerSelection + " this is computer select");
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == "rock" && computerSelection == "Rock" ||
-      playerSelection == "scissors" && computerSelection == "Scissors" ||
-      playerSelection == "paper" && computerSelection == "Paper") {
+  if (playerSelection == "Rock" && computerSelection == "Rock" ||
+      playerSelection == "Scissors" && computerSelection == "Scissors" ||
+      playerSelection == "Paper" && computerSelection == "Paper") {
     console.log("Tie, unlucky fam.");
-  } else if (playerSelection == "rock" && computerSelection == "Paper" ||
-             playerSelection == "paper" && computerSelection == "Scissors" ||
-             playerSelection == "scissors" && computerSelection == "Rock") {
-    console.log("Computer Wins.");
-  } else if (playerSelection == "rock" && computerSelection == "Scissors" ||
-             playerSelection == "paper" && computerSelection == "Rock" ||
-             playerSelection == "scissors" && computerSelection == "Paper") {
-    console.log("Player Wins.")
+  } else if (playerSelection == "Rock" && computerSelection == "Paper" ||
+             playerSelection == "Paper" && computerSelection == "Scissors" ||
+             playerSelection == "Scissors" && computerSelection == "Rock") {
+    console.log("Computer Wins. " + computerSelection + " beats " + playerSelection)
+  } else if (playerSelection == "Rock" && computerSelection == "Scissors" ||
+             playerSelection == "Paper" && computerSelection == "Rock" ||
+             playerSelection == "Scissors" && computerSelection == "Paper") {
+    console.log("Player Wins. " + playerSelection + " beats " + computerSelection)
   }
 }
+
 
 console.log(playRound(playerSelection, computerSelection));
