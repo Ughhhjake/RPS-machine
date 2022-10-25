@@ -39,8 +39,18 @@ let computerSelection = getComputerChoice();
 console.log(computerSelection + " this is computer select");
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == "rock" && computerSelection == "Rock") {
-    console.log("Tie, unlucky fam.")
+  if (playerSelection == "rock" && computerSelection == "Rock" ||
+      playerSelection == "scissors" && computerSelection == "Scissors" ||
+      playerSelection == "paper" && computerSelection == "Paper") {
+    console.log("Tie, unlucky fam.");
+  } else if (playerSelection == "rock" && computerSelection == "Paper" ||
+             playerSelection == "paper" && computerSelection == "Scissors" ||
+             playerSelection == "scissors" && computerSelection == "Rock") {
+    console.log("Computer Wins.");
+  } else if (playerSelection == "rock" && computerSelection == "Scissors" ||
+             playerSelection == "paper" && computerSelection == "Rock" ||
+             playerSelection == "scissors" && computerSelection == "Paper") {
+    console.log("Player Wins.")
   }
 }
 
