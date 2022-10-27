@@ -1,5 +1,5 @@
 function getPlayerChoice() {
-  let randomWord = prompt("What is your selection *cap first letter no punctuation*");
+  let randomWord = prompt("Rock, Paper, or Scissors");
   const playerWord = randomWord.toLowerCase();
 
   if (playerWord == "rock") {
@@ -78,7 +78,7 @@ function game() {
        console.log("Player has won!")
      } if (computerScore > playerScore) {
        console.log("Computer has won.")
-     } if (playerScore = computerScore) {
+     } if (playerScore == computerScore) {
        console.log("That's a draw!")
      }
 }
