@@ -83,5 +83,5 @@ function game() {
      }
 }
 
-game();
+
 console.log("Game Over.")
