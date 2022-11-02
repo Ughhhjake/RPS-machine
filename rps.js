@@ -2,22 +2,13 @@ let choice = 0;
 let computerSelection = 0;
 
 const btnRock = document.querySelector('#btnR');
-btnRock.addEventListener('click', () => {
+rockGame = btnRock.addEventListener('click', () => {
   let choice = "Rock";
   console.log(choice);
   console.log("Player has selected Rock");
-  let randomNumber = Math.floor(Math.random() * 3);
-  //console.log(randomNumber);
-   if (randomNumber == 0) {
-     let computerSelection = "Paper";
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 1) {
-     let computerSelection = "Rock";
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 2) {
-     let computerSelection = "Scissors";
-     console.log(computerSelection + "computerSelection");
-   }  
+  let computerSelection = getComputerChoice();
+  playRound(choice, computerSelection);
+ 
 });
 
 const btnPaper = document.querySelector('#btnP');
@@ -25,18 +16,7 @@ btnPaper.addEventListener('click', () => {
   let choice = "Paper";
   console.log(choice);
   console.log("Player has selected Paper");
-  let randomNumber = Math.floor(Math.random() * 3);
-  //console.log(randomNumber);
-   if (randomNumber == 0) {
-     let computerSelection = "Paper";
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 1) {
-     let computerSelection = "Rock";
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 2) {
-     let computerSelection = "Scissors";
-     console.log(computerSelection + "computerSelection");
-   }
+  let computerSelection = getComputerChoice();
 });
 
 
@@ -45,18 +25,7 @@ btnScissors.addEventListener('click', () => {
   let choice = "Scissors";
   console.log(choice);
   console.log("Player has selected Scissors");
-  let randomNumber = Math.floor(Math.random() * 3);
-  //console.log(randomNumber);
-   if (randomNumber == 0) {
-     let computerSelection = "Paper"
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 1) {
-     let computerSelection = "Rock"
-     console.log(computerSelection + "computerSelection");
-   } else if (randomNumber == 2) {
-     let computerSelection = "Scissors"
-     console.log(computerSelection + "computerSelection");
-   }
+  let computerSelection = getComputerChoice();
 });
 
 
@@ -71,7 +40,7 @@ function playRound(choice, computerSelection) {
   } else if (choice == "Rock" && computerSelection == "Paper" ||
              choice == "Paper" && computerSelection == "Scissors" ||
              choice == "Scissors" && computerSelection == "Rock") {
-    console.log("Computer Wins. " + computerSelection + " beats " + playerSelection);
+    console.log("Computer Wins. " + computerSelection + " beats " + choice);
   //  computerScore++;
     return "computer";
 
@@ -84,5 +53,20 @@ function playRound(choice, computerSelection) {
   }
 }
 
+
+function getComputerChoice() {
+  let randomNumber = Math.floor(Math.random() * 3);
+  //console.log(randomNumber);
+   if (randomNumber == 0) {
+     console.log("Paper")
+     return "Paper"
+   } else if (randomNumber == 1) {
+     console.log("Rock")
+     return "Rock"
+   } else if (randomNumber == 2) {
+     console.log("Scissors")
+     return "Scissors"
+   }
+}
 
 console.log("Game Over.")
