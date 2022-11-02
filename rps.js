@@ -17,6 +17,8 @@ btnPaper.addEventListener('click', () => {
   console.log(choice);
   console.log("Player has selected Paper");
   let computerSelection = getComputerChoice();
+  playRound(choice, computerSelection);
+
 });
 
 
@@ -26,6 +28,8 @@ btnScissors.addEventListener('click', () => {
   console.log(choice);
   console.log("Player has selected Scissors");
   let computerSelection = getComputerChoice();
+  playRound(choice, computerSelection);
+  
 });
 
 
