@@ -6,9 +6,8 @@
    	 <meta charset="UTF-8">
    	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
    	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	  <title>Title</title>
+  	  <title>Rock Paper Scissors</title>
   	  <link rel="stylesheet" href="style.css">
-      <script src="rps.js"></script>
   </head>
     <div class="header">
       <div class="logo">Rock Paper Scissors Game</div>
@@ -17,11 +16,40 @@
 
     <div class="choose">
       <div class="pick">Choose your weapon</div>
+      <div class="rules">First to five points wins</div>
     </div>
 
-    <button>Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
+
+    <div class="container">
+      <button id="btnR">Rock</button>
+      <button id="btnP">Paper</button>
+      <button id="btnS">Scissors</button>
+    </div>
+
+
+    <div class="selection">
+
+      <div class="item">
+        <div class="box"></div>
+      </div>
+
+      <div class="item">
+        <div class="box"></div>
+      </div>
+    </div>
+
+
+
+    <div class="score">
+      <div class="pScore">Player Score is: X</div>
+      <div class="cScore">Computer score is: X</div>
+    </div>
+
+
+    <div class="footer">
+      Copyright © Joe Mama 2022
+    </div>
+    <script src="rps.js"></script>
   </body>
 
 </html>

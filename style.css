@@ -1,6 +1,6 @@
 .header {
     height: 72px;
-    background-color: darkmagenta;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,12 +8,69 @@
     margin: 0;
   }
 
-  .logo {
+.logo {
     color: white;
     font-size: 64px;
     font-weight: 900;
   }
 
-  body {
+body {
     margin: 0;
+    background-color: gray;
+  }
+
+.choose {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+  button {
+    height: 150px;
+    width: 150px;
+    border-radius: 16px;
+  }
+
+.selection {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+}
+
+
+  .box {
+    border: 3px solid blue;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+
+
+.score {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+}
+
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
