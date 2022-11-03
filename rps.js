@@ -13,6 +13,9 @@ rockGame = btnRock.addEventListener('click', () => {
   console.log(computerScore);
   gameOver();
   totalScore();
+  document.getElementById("pick").innerHTML = "Player has selected "
+   + choice + " and Computer has selected " + computerSelection;
+  document.getElementById("rules").innerHTML = roundWinner + " has won this round.";
 });
 
 const btnPaper = document.querySelector('#btnP');
@@ -26,6 +29,10 @@ btnPaper.addEventListener('click', () => {
   console.log(computerScore);
   gameOver();
   totalScore();
+  document.getElementById("pick").innerHTML = "Player has selected "
+   + choice + " and Computer has selected " + computerSelection;
+  document.getElementById("rules").innerHTML = roundWinner + " has won this round.";
+
 });
 
 
@@ -40,6 +47,10 @@ btnScissors.addEventListener('click', () => {
   console.log(computerScore);
   gameOver();
   totalScore();
+  document.getElementById("pick").innerHTML = "Player has selected "
+   + choice + " and Computer has selected " + computerSelection;
+  document.getElementById("rules").innerHTML = roundWinner + " has won this round.";
+
 });
 
 
@@ -49,7 +60,7 @@ function playRound(choice, computerSelection) {
       choice == "Scissors" && computerSelection == "Scissors" ||
       choice == "Paper" && computerSelection == "Paper") {
     console.log("Tie, unlucky fam.");
-    return "Tie";
+    return "No one";
 
   } else if (choice == "Rock" && computerSelection == "Paper" ||
              choice == "Paper" && computerSelection == "Scissors" ||
